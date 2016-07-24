@@ -4,7 +4,14 @@ body {
   font-family: sans-serif;
 }
 
-.account {
+.main-window {
   display: flex;
-  
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.plan-account {
+  display:flex;
+  flex-direction: column;
 }

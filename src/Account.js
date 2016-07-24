@@ -15,8 +15,8 @@ class Account extends Component {
   render() {
     return (
       <tr>
-        <td>{this.props.account[0]}</td>
-        <td>{this.props.account[1]}</td>
+        <td>{this.props.accountNumber}</td>
+        <td>{this.props.accountName}</td>
         <td><input
           type='checkbox'
           onChange={this.handleSummaryChange}
