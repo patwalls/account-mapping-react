@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RawAccountList from './RawAccountList.js';
 import PlanAccountList from './PlanAccountList.js';
+import AddPlanAccount from './AddPlanAccount.js';
 import './App.css';
 
 class App extends Component {
@@ -23,6 +24,11 @@ class App extends Component {
         'Alcohol':[]
       }
     }
+    this.addPlanAccount = this.addPlanAccount.bind(this)
+  }
+  addPlanAccount(account) {
+    this.state.planAccounts[account] = [];
+    this.setState({ planAccounts: this.state.planAccounts });
   }
   render() {
     return (
@@ -31,6 +37,8 @@ class App extends Component {
         <button>Import from Quickbooks</button>
         <div className='main-window'>
           <RawAccountList accounts={this.state.accounts} />
+          <AddPlanAccount
+            addPlanAccount={this.addPlanAccount}/>
           <PlanAccountList
             planAccounts={this.state.planAccounts}
             rawAccounts={this.state.accounts}/>

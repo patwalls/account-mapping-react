@@ -18,8 +18,6 @@ class PlanAccount extends Component {
       var subAccounts = <SubAccountList
         rawAccounts={this.props.rawAccounts}
         subAccounts={this.props.subAccounts}/>
-    } else {
-      var subAccounts = null
     }
 
     return (
@@ -30,9 +28,10 @@ class PlanAccount extends Component {
           +
           </button>
         </td>
-        <td>{this.props.accountName}</td>
-        <td className='plan-account'>
+        <td>{this.props.accountName}
+        <div className='plan-account'>
           {subAccounts}
+        </div>
         </td>
       </tr>
     );

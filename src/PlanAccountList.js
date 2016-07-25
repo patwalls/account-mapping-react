@@ -19,7 +19,7 @@ class PlanAccountList extends Component {
                           accountName={account}
                           subAccounts={this.props.planAccounts[account]}
                           rawAccounts={this.props.rawAccounts}
-                          key={idx}/>
+                          key={idx}/>;
               }, this)
             }
           </tbody>

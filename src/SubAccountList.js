@@ -7,9 +7,14 @@ class SubAccountList extends Component {
     return (
       <ul>
         {
-          Object.keys(this.props.rawAccounts).map(function(account) {
+          Object.keys(this.props.rawAccounts).map(function(account,idx) {
             if (this.props.subAccounts.includes(account)) {
-              return <SubAccount accountNum={account}/>
+              return <SubAccount
+                        key={idx}
+                        accountName={this.props.rawAccounts[account]}
+                        accountNum={account}/>;
+            } else {
+              return null
             }
           }, this)
         }
