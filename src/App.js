@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RawAccountList from './RawAccountList.js';
-import PlanAccountList from './PlanAccountList.js';
+import Plans from './plans.js';
 import AddPlanAccount from './AddPlanAccount.js';
 import './App.css';
 
@@ -24,7 +24,7 @@ class App extends Component {
         'Alcohol':[]
       }
     }
-    this.addPlanAccount = this.addPlanAccount.bind(this)
+    this.addPlanAccount = this.addPlanAccount.bind(this);
   }
   addPlanAccount(account) {
     this.state.planAccounts[account] = [];
@@ -39,7 +39,7 @@ class App extends Component {
           <RawAccountList accounts={this.state.accounts} />
           <AddPlanAccount
             addPlanAccount={this.addPlanAccount}/>
-          <PlanAccountList
+          <Plans
             planAccounts={this.state.planAccounts}
             rawAccounts={this.state.accounts}/>
         </div>

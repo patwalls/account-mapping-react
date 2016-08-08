@@ -27,11 +27,8 @@ class PlanAccount extends Component {
             onClick={this.handleExpand}>
           +
           </button>
-        </td>
-        <td>{this.props.accountName}
-        <div className='plan-account'>
-          {subAccounts}
-        </div>
+        {this.props.accountName}
+        {subAccounts}
         </td>
       </tr>
     );

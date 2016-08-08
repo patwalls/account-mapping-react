@@ -14,12 +14,13 @@ class AddPlanAccount extends Component {
   }
   handleAddPlanAccount() {
     this.props.addPlanAccount(this.state.input);
+    this.setState({input: ''});
   }
   render() {
     console.log(this.state.input);
     return (
       <div>
-        <input onChange={this.handleChange}/>
+        <input onChange={this.handleChange} value={this.state.input}/>
         <button onClick={this.handleAddPlanAccount}></button>
       </div>
     )
