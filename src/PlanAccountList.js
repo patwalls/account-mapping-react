@@ -15,10 +15,10 @@ class PlanAccountList extends Component {
         </thead>
         <tbody>
           {
-            Object.keys(this.props.planAccounts).map(function(account,idx) {
+            Object.keys(this.props.planAccounts[this.props.currentPlan]).map(function(account,idx) {
               return <PlanAccount
                         accountName={account}
-                        subAccounts={this.props.planAccounts[account]}
+                        subAccounts={this.props.planAccounts[this.props.currentPlan][account]}
                         rawAccounts={this.props.rawAccounts}
                         key={idx}/>;
             }, this)

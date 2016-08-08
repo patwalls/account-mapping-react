@@ -22,3 +22,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.plan {
+  border: 1px solid black;
+}
+
+.plan.current {
+  font-weight: bold;
+}
+
+.sub-accounts {
+  display: flex;
+  flex-direction: column;
+}

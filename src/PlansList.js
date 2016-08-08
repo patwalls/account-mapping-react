@@ -4,17 +4,17 @@ import './App.css';
 
 class PlansList extends Component {
   render() {
-    console.log(this.props.plans)
     return (
-      <ul>
-      {
-        this.props.plans.map(function(plan,idx) {
-          return <li>
-                    <Plan plan={plan}/>
-                  </li>;
-        }, this)
-      }
-      </ul>
+      <div className='plans'>
+        {
+          this.props.plans.map(function(plan,idx) {
+            return <Plan
+                    plan={plan}
+                    currentPlan={this.props.currentPlan}
+                    changeCurrentPlan={this.props.changeCurrentPlan}/>;
+          }, this)
+        }
+      </div>
     )
   }
 }

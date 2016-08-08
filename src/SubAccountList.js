@@ -5,7 +5,7 @@ import './App.css';
 class SubAccountList extends Component {
   render() {
     return (
-      <ul>
+      <div className='sub-accounts'>
         {
           Object.keys(this.props.rawAccounts).map(function(account,idx) {
             if (this.props.subAccounts.includes(account)) {
@@ -18,7 +18,7 @@ class SubAccountList extends Component {
             }
           }, this)
         }
-      </ul>
+      </div>
     )
   }
 }

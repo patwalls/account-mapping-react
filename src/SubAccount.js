@@ -4,9 +4,9 @@ import './App.css';
 class SubAccount extends Component {
   render() {
     return (
-      <li>
+      <span>
         {this.props.accountNum} - {this.props.accountName}
-      </li>
+      </span>
     )
   }
 }
