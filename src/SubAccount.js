@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import { ListGroupItem } from 'react-bootstrap';
 
 class SubAccount extends Component {
   render() {
     return (
-      <span>
+      <ListGroupItem bsStyle='warning'>
         {this.props.accountNum} - {this.props.accountName}
-      </span>
+      </ListGroupItem>
     )
   }
 }

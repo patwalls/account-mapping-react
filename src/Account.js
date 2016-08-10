@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { ListGroupItem } from 'react-bootstrap';
 
 class Account extends Component {
   constructor(props) {
@@ -14,15 +15,19 @@ class Account extends Component {
   }
   render() {
     return (
-      <tr>
-        <td>{this.props.accountNumber}</td>
-        <td>{this.props.accountName}</td>
-        <td><input
-          type='checkbox'
-          onChange={this.handleSummaryChange}
-          checked={this.state.summary}/>
-        </td>
-      </tr>
+      <ListGroupItem>
+        <div className='raw-account'>
+          <div className='raw-account-name'>
+            {this.props.accountNumber} - {this.props.accountName}
+          </div>
+          <div className='summary-input'>
+            <input
+              type='checkbox'
+              onChange={this.handleSummaryChange}
+              checked={this.state.summary}/>
+          </div>
+        </div>
+      </ListGroupItem>
     );
   }
 }

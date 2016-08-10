@@ -35,3 +35,19 @@
   display: flex;
   flex-direction: column;
 }
+
+.plan-account {
+  text-align: left;
+}
+
+.raw-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.raw-account.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

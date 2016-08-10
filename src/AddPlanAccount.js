@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import { FormGroup } from 'react-bootstrap';
+import { InputGroup } from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 class AddPlanAccount extends Component {
   constructor(props) {
@@ -19,8 +23,14 @@ class AddPlanAccount extends Component {
   render() {
     return (
       <div>
-        <input onChange={this.handleChange} value={this.state.input}/>
-        <button onClick={this.handleAddPlanAccount}>Add Plan Account</button>
+        <FormGroup>
+          <InputGroup>
+            <FormControl type="text" onChange={this.handleChange} value={this.state.input} />
+            <InputGroup.Button>
+              <Button onClick={this.handleAddPlanAccount}>Add</Button>
+            </InputGroup.Button>
+          </InputGroup>
+        </FormGroup>
       </div>
     )
   }

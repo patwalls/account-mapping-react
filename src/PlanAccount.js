@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SubAccountList from './SubAccountList.js';
 import './App.css';
+import { Button } from 'react-bootstrap';
+import { ListGroupItem } from 'react-bootstrap';
 
 class PlanAccount extends Component {
   constructor(props) {
@@ -21,16 +23,12 @@ class PlanAccount extends Component {
     }
 
     return (
-      <tr>
-        <td>
-          <button
-            onClick={this.handleExpand}>
-          +
-          </button>
-        {this.props.accountName}
+      <div>
+        <ListGroupItem href="#" onClick={this.handleExpand} className='plan-account'>
+          + {this.props.accountName}
+        </ListGroupItem>
         {subAccounts}
-        </td>
-      </tr>
+      </div>
     );
   }
 }
